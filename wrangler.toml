@@ -1,11 +1,11 @@
-name = "email-cf-svc"
+name = "email-sending-svc"
+main = "src/worker.ts"
 compatibility_date = "2024-01-01"
 
 [observability]
 enabled = true
 
-# Email binding for sending emails (if using unsafe.bindings)
-# Note: This requires the sender to be verified in Cloudflare dashboard
-[[unsafe.bindings]]
+# Email sending binding
+# The sender must be verified in Cloudflare dashboard (Email > Email Send)
+[[send_email]]
 name = "EMAIL"
-type = "email"

@@ -1,2 +1,4 @@
 .puku
+.wrangler
 node_modules
+.env
